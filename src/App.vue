@@ -6,8 +6,6 @@
     <p @click="goods">1111</p>
 
     <p>stupid</p>
-    <p>this is dev </p>
-
     <transition name="fade">
         <router-view />
     </transition>
