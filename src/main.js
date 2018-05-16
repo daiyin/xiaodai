@@ -9,12 +9,15 @@ Vue.use(vueRouter);
 
 
 import goods from './components/goods/goods.vue';
+import helloWord from './components/HelloWorld.vue';
 
-const routes = [{
-    path: '/goods',
-    component: goods,
-    name: 'goods'
-}]
+const routes = [
+	{
+	    path: '/goods',
+	    component: goods,
+	    name: 'goods'
+	}
+]
 const router = new vueRouter({
     routes
 })
