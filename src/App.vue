@@ -4,7 +4,6 @@
     <!-- <HelloWorld/> -->
     <!-- <router-link to="goods" @click="goods"  href="javascript:void(0)">goods</router-link> -->
     <p @click="goods">1111</p>
-    asdasdasd
     <transition name="fade">
         <router-view />
     </transition>
