@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <!-- <HelloWorld/> -->
-    <!-- <router-link to="goods" @click="goods"  href="javascript:void(0)">goods</router-link> -->
-    <p @click="goods">1111</p>
+    <p @click="goods">点我</p>
     <transition name="fade">
         <router-view />
     </transition>
