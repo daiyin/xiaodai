@@ -1,6 +1,5 @@
 <template>
 <div class="" style="font-size: 20px;color: #000;">
-    111 This is goods
     <p>{{this.$route.query.id.name}}</p>
     <p>{{this.$route.query.id.age}}</p>
     <p>{{this.$route.query.id.address}}</p>

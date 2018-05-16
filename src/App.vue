@@ -11,12 +11,10 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
-
+import seller from './components/goods/seller.vue';
 export default {
     name: 'App',
     components: {
-        HelloWorld
     },
     methods: {
         goods() {
@@ -38,12 +36,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 /* .fade-enter-active, .fade-leave-active {
   transition: .2s;
