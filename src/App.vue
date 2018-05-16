@@ -2,6 +2,7 @@
   <div id="app">
     <img src="./assets/logo.png">
     <p @click="goods">点我</p>
+    <p>你若盛开清风自来</p>
     <transition name="fade">
         <router-view />
     </transition>
