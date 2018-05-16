@@ -4,6 +4,7 @@
     <!-- <HelloWorld/> -->
     <!-- <router-link to="goods" @click="goods"  href="javascript:void(0)">goods</router-link> -->
     <p @click="goods">1111</p>
+    asdasdasd
     <transition name="fade">
         <router-view />
     </transition>
@@ -45,10 +46,33 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+/* .fade-enter-active, .fade-leave-active {
+  transition: .2s;
+  position:relative;
+  left: 0;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+/* {
+    left: -330px;
+}  */
+
+
+
+.fade-enter-active {
+  animation: bounce-in .5s;
+}
+.fade-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 </style>
