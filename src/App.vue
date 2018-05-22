@@ -1,34 +1,64 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <p @click="goods">点我</p>
     <p>你若盛开清风自来</p>
     <p>风在歌唱，雨滴敲打着窗台</p>
+    <ul>
+      <li v-for="item in list" @click="clickme(item.name,item.age,item.address)">
+        {{item.name}}
+      </li>
+    </ul>
     <transition name="fade">
         <router-view />
     </transition>
+    
   </div>
 </template>
 
 <script>
-import seller from './components/goods/seller.vue';
 export default {
+    data() {
+      return {
+        list: [
+            {
+                'name': '小戴',
+                'age': '20',
+                'address': '重庆长寿'
+            },
+            {
+                'name': '小谢',
+                'age': '21',
+                'address': '重庆长寿'
+            },
+            {
+                'name': '小张',
+                'age': '22',
+                'address': '重庆长寿'
+            },
+            {
+                'name': '小李',
+                'age': '23',
+                'address': '重庆长寿'
+            }
+        ]
+      }
+    },
     name: 'App',
     components: {
     },
     methods: {
-        goods() {
-            const id = {
-                'name': '小戴',
-                'age': '20',
-                'address': '重庆长寿'
+        clickme(name,age,address) {
+          const list = {
+            'name': name,
+            'age': age,
+            'address': address
+          }
+          this.$router.push({
+            name: 'goods',
+            query: {
+              list
             }
-            this.$router.push({
-                name: 'goods',
-                query: {
-                    id,
-                }
-            })
+          });
         }
     }
 }
