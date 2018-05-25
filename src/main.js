@@ -3,10 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import vueRouter from 'vue-router';
-
+import axIos from 'vue-axios'
+import Axios from 'axios'
 
 Vue.use(vueRouter);
-
+Vue.use(axIos,Axios);
 
 import goods from './components/goods/goods.vue';
 
