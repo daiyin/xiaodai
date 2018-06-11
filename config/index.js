@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://aladdin2.test.hrbbwx.com',
+        target: 'http://open.douyucdn.cn/',
         // target: 'https://www.shendenglicai.com/aladdin',
         changeOrigin: true,
         pathRewrite: {

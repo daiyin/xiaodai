@@ -1,7 +1,7 @@
 <template>
     <div id="apps">
         <div style="margin: 0 auto;width: 60%;">
-            <span>请输入人你的名字：</span>
+            <span>请输入你的名字：</span>
             <input type="text" name="" v-model="inputVal" placeholder="请输入你的名字" style="width: 50%;" ref="textVal">
             <button @click="complete">完成</button>
         </div>
@@ -33,6 +33,7 @@
         <img src="../assets/timg.gif" width="100%" height="100%" class="img" ref="blast" v-show="blast" />
         <img src="../assets/youyan.jpeg" width="500" height="300" class="img" ref="fire" v-show="youyan" />
     </div>
+
 </template>
 
 <script>
@@ -62,8 +63,11 @@ export default {
                 alert('你输入的不是不是汉字，或者你输入的名字长度不足两个汉字');
                 return;
             }
+            if(inputvalue == '张三' || inputvalue == '李四' || inputvalue == '王麻子') {
+                alert('你名字叫'+inputvalue+'？我不信！~~从新输入');
+                return;
+            }
             this.mask = true;
-            let _this = this;
         },
         oHyes() {
             this.yes = '喜欢'
@@ -96,7 +100,6 @@ export default {
                 this.fires = false;
                 this.blast = true;
                 this.$refs.bz.play();
-                console.log(this.$refs.bz.duration);
             }.bind(this),4000)
             setTimeout(function() {
                 var t=confirm("再给你一次选择的机会,做不做我女朋友");
@@ -132,7 +135,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 * {
     padding: 0;
     margin: 0;
@@ -150,7 +153,7 @@ input {
 }
 button {
   width: 100px;
-  height: 45px;
+  height: 47px;
   margin-top: 20px;
   background: #3385ff;
   border: 0;
@@ -228,5 +231,6 @@ li {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    z-index: 50;
 }
 </style>
